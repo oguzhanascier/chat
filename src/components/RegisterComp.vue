@@ -21,8 +21,9 @@ export default {
 
         const { hata, signup } = useRegister
 
-        const uyeOl = () => {
-            console.log(kullaniciAd.value, email.value, parola.value);
+        const uyeOl = async () => {
+            // console.log(kullaniciAd.value, email.value, parola.value);
+            await signup(email.value, parola.value, kullaniciAd.value)
 
         }
         return { kullaniciAd, email, parola, uyeOl }
