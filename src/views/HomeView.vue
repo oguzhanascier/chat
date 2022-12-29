@@ -3,11 +3,11 @@
     <h2>Chat</h2>
     <div v-if="uyeMi">
       <LoginFormVue />
-      <p>Üye olmak için <span>tıkla.</span></p>
+      <p>Üye olmak için <span @click="uyeMi=false">tıkla.</span></p>
     </div>
     <div v-else>
       <RegisterVue />
-      <p>Giriş yapmak için <span>tıkla</span></p>
+      <p>Giriş yapmak için <span @click="uyeMi=true">tıkla</span></p>
     </div>
 
   </div>
