@@ -1,5 +1,6 @@
 <template>
-  <div class="home">
+  <div class="home container">
+    <h2>Chat</h2>
  
   </div>
 </template>
@@ -13,3 +14,11 @@ export default {
   }
 }
 </script>
+
+
+<style scoped>
+.home{
+  text-align: left;
+  padding: 20px 50px;
+}
+</style>
