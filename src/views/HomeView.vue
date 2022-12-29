@@ -16,8 +16,10 @@ export default {
     RegisterVue,
     LoginFormVue
   },
-  setup(){
-    const uyeMi= ref(true)
+  setup() {
+    const uyeMi = ref(true)
+
+    return{uyeMi}
 
   }
 }
@@ -27,7 +29,7 @@ export default {
 
 
 <style scoped>
-.home{
+.home {
   text-align: left;
   padding: 20px 50px;
 }
