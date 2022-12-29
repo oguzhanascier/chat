@@ -3,22 +3,27 @@ import { auth } from "../firebase/config";
 
 const hata = ref(null);
 
-const signup = async (email, parola, kullaniciAd) => {};
+const signup = async (email, parola, kullaniciAd) => { };
 
 const useRegister = () => {
-  hata.value = null;
+    hata.value = null;
 
-  try {
-    const res= await auth.createUserWithEmailAndPassword(email,parola)
+    try {
+        const res = await auth.createUserWithEmailAndPassword(email, parola)
 
-    if(!res){
-        throw new Error ('Register Hatalı')
+        if (!res) {
+            throw new Error('Register Hatalı')
+        }
+        hata.value = null
+
+        return res
+
+    } catch (error) {
+        hata.value=error.message
+
     }
-  } catch (error) {
-    
-  }
 
-  return { hata, signup };
+    return { hata, signup };
 };
 
 export default useRegister;
