@@ -3,7 +3,7 @@
         <h4>Üye Ol</h4>
         <input type="text" placeholder="Kullanıcı Adını Giriniz" v-model="kullaniciAd">
         <input type="text" placeholder="E-Mail Giriniz" v-model="email">
-        <input type="text" placeholder="Parola Giriniz" v-model="parola">
+        <input type="password" placeholder="Parola Giriniz" v-model="parola">
         <button>Üye Ol</button>
     </form>
 </template>
