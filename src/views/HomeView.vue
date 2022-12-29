@@ -4,7 +4,10 @@
     <RegisterVue />
     <div v-if="uyeMi">
       <LoginFormVue />
-
+      <p>Üye olmak için <span>tıkla.</span></p>
+    </div>
+    <div>
+      
     </div>
 
   </div>
