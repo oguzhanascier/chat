@@ -10,6 +10,7 @@
 
 <script >
 import { ref } from 'vue'
+import useRegister from '@/compasables/useRegister'
 
 
 export default {
