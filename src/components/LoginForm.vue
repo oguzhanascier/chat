@@ -17,7 +17,7 @@ export default {
         const parola = ref('')
 
         const uyeOl = () => {
-            console.log(kullaniciAd.value, email.value, parola.value);
+            console.log(email.value, parola.value);
 
         }
         return { email, parola, uyeOl }
