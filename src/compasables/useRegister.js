@@ -1,16 +1,20 @@
-import {ref} from 'vue'
-import {auth} from '../firebase/config'
+import { ref } from "vue";
+import { auth } from "../firebase/config";
 
-const hata= ref(null)
+const hata = ref(null);
 
-const signup= async (email, parolai, kullaniciAd)=>{
+const signup = async (email, parolai, kullaniciAd) => {};
 
-}
+const useRegister = () => {
+  hata.value = null;
 
+  try {
+    const res= await auth.createUserWithEmailAndPassword()
+  } catch (error) {
+    
+  }
 
-const useRegister=()=>{
+  return { hata, signup };
+};
 
-return {hata,signup}
-}
-
-export default useRegister
+export default useRegister;
