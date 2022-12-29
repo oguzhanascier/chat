@@ -1,13 +1,13 @@
 <template>
   <div class="home container">
     <h2>Chat</h2>
-    <RegisterVue />
     <div v-if="uyeMi">
       <LoginFormVue />
       <p>Üye olmak için <span>tıkla.</span></p>
     </div>
-    <div>
-      
+    <div v-else>
+      <RegisterVue />
+      <p>Giriş yapmak için <span>tıkla</span></p>
     </div>
 
   </div>
