@@ -2,7 +2,11 @@
   <div class="home container">
     <h2>Chat</h2>
     <RegisterVue />
-    <LoginFormVue />
+    <div v-if="uyeMi">
+      <LoginFormVue />
+
+    </div>
+
   </div>
 </template>
 
@@ -19,7 +23,7 @@ export default {
   setup() {
     const uyeMi = ref(true)
 
-    return{uyeMi}
+    return { uyeMi }
 
   }
 }
