@@ -5,6 +5,10 @@
         <input type="text" placeholder="E-Mail Giriniz" v-model="email">
         <input type="password" placeholder="Parola Giriniz" v-model="parola">
         <button>Üye Ol</button>
+        <div v-if="hata" class="error">
+            <p>{{ hata }}</p>
+
+        </div>
     </form>
 </template>
 
@@ -19,14 +23,14 @@ export default {
         const email = ref('')
         const parola = ref('')
 
-        const { hata, signup } = useRegister
+        const { hata, signup } = useRegister()
 
         const uyeOl = async () => {
             // console.log(kullaniciAd.value, email.value, parola.value);
             await signup(email.value, parola.value, kullaniciAd.value)
 
         }
-        return { kullaniciAd, email, parola, uyeOl }
+        return { kullaniciAd, email, parola, uyeOl, hata }
 
     }
 }

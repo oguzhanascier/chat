@@ -3,26 +3,28 @@ import { auth } from "../firebase/config";
 
 const hata = ref(null);
 
-const signup = async (email, parola, kullaniciAd) => { };
-
-const useRegister = () => {
+const signup = async (email, parola, kullaniciAd) => {
     hata.value = null;
 
     try {
-        const res = await auth.createUserWithEmailAndPassword(email, parola)
+        if(kullaniciAd.trim() === ''){
+            throw new Error('Kullanıcı adı boş bırakılamaz')
+        }
+        const res = await auth.createUserWithEmailAndPassword(email, parola);
 
         if (!res) {
-            throw new Error('Register Hatalı')
+            throw new Error("Register Hatalı");
         }
-        hata.value = null
+        await res.user.updateProfile({ displayName: kullaniciAd });
+        hata.value = null;
 
-        return res
-
+        return res;
     } catch (error) {
-        hata.value=error.message
-
+        hata.value = error.message;
     }
+};
 
+const useRegister = () => {
     return { hata, signup };
 };
 
