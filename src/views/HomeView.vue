@@ -1,16 +1,17 @@
 <template>
   <div class="home container">
     <h2>Chat</h2>
- 
+    <RegisterVue />
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
+import RegisterVue from '@/components/RegisterComp.vue';
 
 export default {
   name: 'HomeView',
   components: {
+    RegisterVue
   }
 }
 </script>
