@@ -9,14 +9,16 @@
 <script>
 import RegisterVue from '@/components/RegisterComp.vue';
 import LoginFormVue from '@/components/LoginForm.vue';
-
+import { ref } from 'vue';
 export default {
   name: 'HomeView',
   components: {
     RegisterVue,
     LoginFormVue
-  }
+  },
 }
+
+
 </script>
 
 
