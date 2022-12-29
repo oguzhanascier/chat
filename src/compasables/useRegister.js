@@ -12,3 +12,5 @@ const useRegister=()=>{
 
 return {hata,signup}
 }
+
+export default useRegister
