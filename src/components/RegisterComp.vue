@@ -19,6 +19,8 @@ export default {
         const email = ref('')
         const parola = ref('')
 
+        const { hata, signup } = useRegister
+
         const uyeOl = () => {
             console.log(kullaniciAd.value, email.value, parola.value);
 
