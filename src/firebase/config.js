@@ -1,6 +1,5 @@
-import firebase from "firebase/app";
-
-import "firebase/firestore";
+import firebase from "firebase/compat/app";
+import "firebase/compat/firestore";
 
 const firebaseConfig = {
   apiKey: "AIzaSyDFVqNoH3zchuEHkAbdqdVpgQLuheBE-CQ",
@@ -24,3 +23,5 @@ firebase.initializeApp(firebaseConfig);
 
 const db = firebase.firestore();
 const tarih = firebase.firestore.FieldValue.serverTimestamp;
+
+export { db, tarih };
