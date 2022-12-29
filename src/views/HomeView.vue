@@ -2,16 +2,19 @@
   <div class="home container">
     <h2>Chat</h2>
     <RegisterVue />
+    <LoginFormVue />
   </div>
 </template>
 
 <script>
 import RegisterVue from '@/components/RegisterComp.vue';
+import LoginFormVue from '@/components/LoginForm.vue';
 
 export default {
   name: 'HomeView',
   components: {
-    RegisterVue
+    RegisterVue,
+    LoginFormVue
   }
 }
 </script>
