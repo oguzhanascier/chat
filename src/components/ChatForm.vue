@@ -20,9 +20,30 @@ export default {
                 tarhi: tarih()
             }
             mesaj.value = ''
+            console.log(chat);
         }
 
         return { mesaj, gonder }
     }
 }
 </script>
+
+
+<style scoped>
+form{
+    width: 600px;
+    margin: 30px auto;
+    text-align: center;
+}
+input{
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 5px;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 0;
+    border-radius: 10px;
+    font-family: inherit;
+    outline: none;
+}
+</style>
