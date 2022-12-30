@@ -13,13 +13,16 @@ import { ref } from 'vue'
 import useLogin from '@/compasables/useLogin'
 
 export default {
-    setup() {
+    setup(props,context) {
         const email = ref('')
         const parola = ref('')
         const {hata,login}=useLogin()
 
         const girisYap = async () => {
             login(email.value, parola.value);
+            if(!hata.value){
+                context.emit('login')
+            }
 
         }
         return { email, parola, girisYap,hata,login }
