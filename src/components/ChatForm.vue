@@ -7,6 +7,7 @@
 <script>
     import getUser from '@/compasables/getUser';
     import { tarih } from '@/firebase/config';
+    import { ref } from 'vue';
 export default {
     setup() {
 
