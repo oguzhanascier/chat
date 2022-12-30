@@ -11,6 +11,7 @@
 <script>
 import { auth } from '../firebase/config'
 import { useRouter } from 'vue-router'
+import getUser from '../compasables/getUser'
 export default {
     setup() {
         const router = useRouter()
