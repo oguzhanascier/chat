@@ -1,13 +1,13 @@
 <template>
-    <div>
+    <form @keypress.enter="gonder">
 
-    </div>
+    </form>
 </template>
 
 <script>
 export default {
-    setup () {
-        
+    setup() {
+
 
         return {}
     }
