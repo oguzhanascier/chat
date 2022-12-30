@@ -29,7 +29,7 @@ export default {
     const router = useRouter()
 
     const chatBasla = () => {
-      router.push({ name: 'chatoda' })
+      router.push({ name: 'chat' })
     }
 
     return { uyeMi, chatBasla }
