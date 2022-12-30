@@ -7,8 +7,9 @@
 
 <script>
 import NavbarCompVue from '@/components/NavbarComp.vue';
+import ChatFormVue from '@/components/ChatForm.vue';
 export default {
-    components: {NavbarCompVue}
+    components: {NavbarCompVue,ChatFormVue}
 
 }
 </script>
