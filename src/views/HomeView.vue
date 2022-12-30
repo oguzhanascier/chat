@@ -2,12 +2,12 @@
   <div class="home container">
     <h2>Chat</h2>
     <div v-if="uyeMi">
-      <LoginFormVue />
-      <p>Üye olmak için <span @click="uyeMi=false">tıkla.</span></p>
+      <LoginFormVue @login="chatBasla" />
+      <p>Üye olmak için <span @click="uyeMi = false">tıkla.</span></p>
     </div>
     <div v-else>
-      <RegisterVue />
-      <p>Giriş yapmak için <span @click="uyeMi=true">tıkla</span></p>
+      <RegisterVue @register="chatBasla" />
+      <p>Giriş yapmak için <span @click="uyeMi = true">tıkla</span></p>
     </div>
 
   </div>
@@ -17,6 +17,7 @@
 import RegisterVue from '@/components/RegisterComp.vue';
 import LoginFormVue from '@/components/LoginForm.vue';
 import { ref } from 'vue';
+import { useRouter } from 'vue-router';
 export default {
   name: 'HomeView',
   components: {
@@ -25,6 +26,11 @@ export default {
   },
   setup() {
     const uyeMi = ref(true)
+    const router = useRouter()
+
+    const chatBasla=()=>{
+      router.push({name:'chatoda'})
+    }
 
     return { uyeMi }
 
