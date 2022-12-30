@@ -3,11 +3,11 @@
         <p>Kullanıcı Adı</p>
         <p>Kullanıcı Emaili</p>
     </div>
+    <button>çıkış</button>
 </template>
 
 <script>
-import { auth } from '../firebase/config';
-import { useRouter } from 'vue-router';
+
     export default {
         
     }
