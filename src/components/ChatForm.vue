@@ -1,6 +1,6 @@
 <template>
     <form>
-        <input @keypress.enter.prevent="gonder" placeholder="Mesaj yaz..">
+        <input @keypress.enter.prevent="gonder" placeholder="Mesaj yaz.." v-model="mesaj">
     </form>
 </template>
 
