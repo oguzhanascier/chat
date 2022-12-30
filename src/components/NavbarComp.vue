@@ -1,16 +1,19 @@
 <template>
-    <div>
-        <p>Kullanıcı Adı</p>
-        <p>Kullanıcı Emaili</p>
-    </div>
-    <button>çıkış</button>
+    <nav>
+        <div>
+            <p>Kullanıcı Adı</p>
+            <p class="email">Kullanıcı Emaili</p>
+        </div>
+        <button @click="cikisYap">çıkış</button>
+
+    </nav>
 </template>
 
 <script>
 
-    export default {
-        
-    }
+export default {
+
+}
 </script>
 
 <style lang="scss" scoped>
