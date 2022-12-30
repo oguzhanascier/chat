@@ -5,14 +5,24 @@
 </template>
 
 <script>
-    import getUser from '@/compasables/getUser';
-    import { tarih } from '@/firebase/config';
-    import { ref } from 'vue';
+import getUser from '@/compasables/getUser';
+import { tarih } from '@/firebase/config';
+import { ref } from 'vue';
 export default {
     setup() {
 
+        const { kullanici } = getUser()
+        const mesaj = ref('')
+        const gonder = async () => {
+            const chat = {
+                kullanici: kullanici.value.displayName,
+                mesaj: mesaj.value,
+                tarhi: tarih()
+            }
+            mesaj.value = ''
+        }
 
-        return {}
+        return { mesaj, gonder }
     }
 }
 </script>
