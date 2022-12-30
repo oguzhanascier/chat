@@ -5,6 +5,8 @@
 </template>
 
 <script>
+    import getUser from '@/compasables/getUser';
+    import { tarih } from '@/firebase/config';
 export default {
     setup() {
 
