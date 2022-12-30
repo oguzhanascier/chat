@@ -7,14 +7,11 @@ const login = async (email, parola) => {
     hata.value = null;
 
     try {
-
         const res = await auth.signInWithEmailAndPassword(email, parola);
-
         if (!res) {
             throw new Error("Giriş Hatalı");
         }
         hata.value = null;
-
         return res;
     } catch (error) {
         hata.value = error.message;
