@@ -1,5 +1,5 @@
 <template>
-    <form @keypress.enter="gonder">
+    <form @keypress.enter.prevent="gonder">
 
     </form>
 </template>
