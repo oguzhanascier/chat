@@ -5,22 +5,24 @@
         <input type="password" placeholder="Parola Giriniz" v-model="parola">
         <button>Giriş</button>
     </form>
+    <div class="error">{{hata}}</div>
 </template>
 
 <script >
 import { ref } from 'vue'
-
+import useLogin from '@/compasables/useLogin'
 
 export default {
     setup() {
         const email = ref('')
         const parola = ref('')
+        const {hata,login}=useLogin()
 
-        const girisYap = () => {
-            console.log(email.value, parola.value);
+        const girisYap = async () => {
+            login(email.value, parola.value);
 
         }
-        return { email, parola, girisYap }
+        return { email, parola, girisYap,hata,login }
 
     }
 }
