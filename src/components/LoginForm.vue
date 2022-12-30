@@ -1,5 +1,5 @@
 <template>
-    <form @submit="girisYap">
+    <form @submit.prevent="girisYap">
         <h4>Giriş Ekranı</h4>
         <input type="text" placeholder="E-Mail Giriniz" v-model="email">
         <input type="password" placeholder="Parola Giriniz" v-model="parola">
