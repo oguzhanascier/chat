@@ -5,9 +5,11 @@
 </template>
 
 <script>
-    export default {
-        
-    }
+import NavbarVue from '../components/Navbar.vue';
+export default {
+components:[NavbarVue]
+    
+}
 </script>
 
 <style lang="scss" scoped>
