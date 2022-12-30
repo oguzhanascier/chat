@@ -28,11 +28,11 @@ export default {
     const uyeMi = ref(true)
     const router = useRouter()
 
-    const chatBasla=()=>{
-      router.push({name:'chatoda'})
+    const chatBasla = () => {
+      router.push({ name: 'chatoda' })
     }
 
-    return { uyeMi }
+    return { uyeMi, chatBasla }
 
   }
 }
