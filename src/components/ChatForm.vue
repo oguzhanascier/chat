@@ -1,6 +1,6 @@
 <template>
-    <form @keypress.enter.prevent="gonder">
-
+    <form>
+        <input @keypress.enter.prevent="gonder" placeholder="Mesaj yaz..">
     </form>
 </template>
 
