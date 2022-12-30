@@ -1,14 +1,15 @@
 <template>
-    <div>
-        <h3>Chat Odası</h3>
+    <h3>Chat Odası</h3>
+    <div class="container">
+        <NavbarVue />
     </div>
 </template>
 
 <script>
 import NavbarVue from '../components/NavbarComp.vue';
 export default {
-components:[NavbarVue]
-    
+    components: [NavbarVue]
+
 }
 </script>
 

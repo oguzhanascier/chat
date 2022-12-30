@@ -6,6 +6,8 @@
 </template>
 
 <script>
+import { auth } from '../firebase/config';
+import { useRouter } from 'vue-router';
     export default {
         
     }
