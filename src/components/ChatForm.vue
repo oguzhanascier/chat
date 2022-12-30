@@ -45,5 +45,7 @@ input{
     border-radius: 10px;
     font-family: inherit;
     outline: none;
+    background: #3d3d3d;
+    color: white;
 }
 </style>
