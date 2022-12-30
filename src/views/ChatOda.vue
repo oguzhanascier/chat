@@ -1,6 +1,6 @@
 <template>
     <div>
-
+        <h3>Chat Odası</h3>
     </div>
 </template>
 
