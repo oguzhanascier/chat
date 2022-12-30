@@ -16,11 +16,11 @@ export default {
         const email = ref('')
         const parola = ref('')
 
-        const uyeOl = () => {
+        const girisYap = () => {
             console.log(email.value, parola.value);
 
         }
-        return { email, parola, uyeOl }
+        return { email, parola, girisYap }
 
     }
 }
