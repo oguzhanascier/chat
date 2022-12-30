@@ -8,11 +8,19 @@
 
     </nav>
 </template>
-
 <script>
-
+import { auth } from '../firebase/config'
+import { useRouter } from 'vue-router'
 export default {
-
+    setup() {
+        const router = useRouter()
+        const cikisYap = async () => {
+            await auth.signOut().then(() => {
+                router.push({ name: 'home' })
+            })
+        }
+        return {cikisYap}
+    }
 }
 </script>
 
