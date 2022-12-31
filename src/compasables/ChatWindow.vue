@@ -5,6 +5,7 @@
 </template>
 
 <script>
+import getColletion from './getColletion';
 export default {
     setup () {
         
