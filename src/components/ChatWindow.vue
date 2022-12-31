@@ -1,6 +1,11 @@
 <template>
     <div class="chat-window">
         <div v-if="hata">{{ hata }}</div>
+        <div class="messages" v-if="belgeler">
+            <div v-for="belge in belgeler" :key="belge.id">
+
+            </div>
+        </div>
     </div>
 </template>
 
