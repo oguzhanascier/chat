@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import getColletion from './getColletion';
+import getColletion from '../compasables./compasables/getColletion';
 export default {
     setup() {
         const { hata, belgeler } = getColletion('mesajlar')
