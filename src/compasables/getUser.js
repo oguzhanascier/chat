@@ -5,7 +5,6 @@ const kullanici = ref(auth.currentUser)
 
 
 auth.onAuthStateChanged(k => {
-    console.log(k);
     kullanici.value = k
 })
 

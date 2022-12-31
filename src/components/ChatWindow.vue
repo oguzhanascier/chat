@@ -3,7 +3,8 @@
         <div v-if="hata">{{ hata }}</div>
         <div class="messages" v-if="belgeler">
             <div v-for="belge in belgeler" :key="belge.id" class="single">
-                <span class="created-at">{{belge.tarihi.toDate()}}</span>
+                <p>{{belgeler}}</p>
+                <span class="created-at">{{belge.tarihi}}</span>
                 <span class="name">{{belge.kullanici}}</span>
                 <span style="text-decoration:none">{{belge.mesaj}}</span>
                 
@@ -13,11 +14,10 @@
 </template>
 
 <script>
-import getColletion from '@/compasables/getColletion';
+import getColletion from '../compasables/getColletion';
 export default {
     setup() {
         const { hata, belgeler } = getColletion('mesajlar')
-            console.log(belgeler);
 
         return { hata, belgeler }
     }
