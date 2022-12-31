@@ -5,6 +5,7 @@
             <div v-for="belge in belgeler" :key="belge.id" class="single">
                 <span class="created-at">{{belge.tarihi.toDate()}}</span>
                 <span class="name">{{belge.kullanici}}</span>
+                <span style="text-decoration:none">{{belge.mesaj}}</span>
                 
             </div>
         </div>
