@@ -8,9 +8,9 @@
 import getColletion from './getColletion';
 export default {
     setup () {
-        
+        const {hata,belgeler}=getColletion('mesajlar')
 
-        return {}
+        return {hata,belgeler}
     }
 }
 </script>
