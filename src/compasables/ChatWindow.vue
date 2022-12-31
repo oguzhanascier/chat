@@ -1,16 +1,16 @@
 <template>
-    <div>
-
+    <div class="chat-window">
+        <div v-if="hata">{{ hata }}</div>
     </div>
 </template>
 
 <script>
 import getColletion from './getColletion';
 export default {
-    setup () {
-        const {hata,belgeler}=getColletion('mesajlar')
+    setup() {
+        const { hata, belgeler } = getColletion('mesajlar')
 
-        return {hata,belgeler}
+        return { hata, belgeler }
     }
 }
 </script>
