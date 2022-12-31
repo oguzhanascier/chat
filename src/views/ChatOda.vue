@@ -2,6 +2,7 @@
     <h3>Chat Odası</h3>
     <div class="container">
         <NavbarCompVue />
+        <ChatWindowVue />
         <chat-form-vue />
     </div>
 </template>
