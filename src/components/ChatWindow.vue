@@ -13,10 +13,11 @@
 </template>
 
 <script>
-import getColletion from '../compasables./compasables/getColletion';
+import getColletion from '@/compasables/getColletion';
 export default {
     setup() {
         const { hata, belgeler } = getColletion('mesajlar')
+            console.log(belgeler);
 
         return { hata, belgeler }
     }
