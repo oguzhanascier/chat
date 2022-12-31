@@ -4,6 +4,8 @@
         <div class="messages" v-if="belgeler">
             <div v-for="belge in belgeler" :key="belge.id" class="single">
                 <span class="created-at">{{belge.tarihi.toDate()}}</span>
+                <span class="name">{{belge.kullanici}}</span>
+                
             </div>
         </div>
     </div>
