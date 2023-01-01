@@ -1,11 +1,9 @@
 import { ref } from "vue";
 import { db } from '../firebase/config'
 
-
-
 const getColletion = (koleksiyon) => {
-    const belgeler = ref('')
-    const hata = ref('')
+    const belgeler = ref(null)
+    const hata = ref(null)
 
     let koleksiyonRef = db.collection(koleksiyon).orderBy('tarihi')
 
@@ -16,8 +14,13 @@ const getColletion = (koleksiyon) => {
         snap.docs.forEach(doc => {
             doc.data().tarihi && sonuclar.push({ ...doc.data, id:doc.id })
         })
-        belgeler.value = sonuclar
-        hata.value = null
+
+       try {
+        belgeler.value = null
+       } catch (error) {
+        hata.value = error
+        
+       }
     }, err => {
         belgeler.value = null
         hata.value = 'server error'
